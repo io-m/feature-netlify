@@ -1,3 +1,5 @@
+"use client";
+
 import React, { ReactNode, createContext } from "react";
 import { Summary } from "../types/Summary";
 import { OPPORTUNITIES_SUMMARY } from "../data/summaries/opportunitiesSummary";

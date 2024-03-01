@@ -1,3 +1,4 @@
+"use client";
 import { TopicComments } from "@/types/TopicComments";
 import React, { ReactNode, createContext } from "react";
 import { LEARNING_OVERVIEW } from "../data/overviews/learningsOverview";
