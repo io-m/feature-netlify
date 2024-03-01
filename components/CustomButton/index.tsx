@@ -27,7 +27,11 @@ const ChatbotButton = () => {
 
   return (
     <>
-      <Button onPress={onOpen} color="primary">
+      <Button
+        onPress={onOpen}
+        color="warning"
+        className="text-white bg-orange-500"
+      >
         Ask GPT
       </Button>
       <Modal

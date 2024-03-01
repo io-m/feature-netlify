@@ -10,7 +10,7 @@ const AI_InsightLandingPage: NextPage = () => {
     <div className="relative flex items-center w-full flex-col">
       {/* Absolute positioned SVG image */}
       <div className="absolute top-1 left-1">
-        <Image src="/vercel.svg" alt="Logo" width={100} height={100} />
+        <Image src="/logo.png" alt="Logo" width={160} height={160} />
       </div>
 
       <Tabs aria-label="Dynamic tabs">

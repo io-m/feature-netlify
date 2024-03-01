@@ -77,7 +77,8 @@ const SummaryDetails = () => {
     <div className="flex flex-col w-full">
       <div className="bg-white shadow rounded-lg p-4 m-2 w-3/4 ">
         <h1 className="text-3xl font-bold px-3 text-indigo-600 tracking-wide">
-          Summary
+          Summary:{" "}
+          <span className="text-2xl font-bold px-1">{dataSubTopic}</span>
         </h1>
         <div className="flex flex-col justify-start h-full">
           <ul className="list-disc list-inside text-base font-sans p-3">
