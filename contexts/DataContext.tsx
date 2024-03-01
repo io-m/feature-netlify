@@ -1,11 +1,12 @@
 "use client";
 import { TopicComments } from "@/types/TopicComments";
 import React, { ReactNode, createContext } from "react";
-import { LEARNING_OVERVIEW } from "../data/overviews/learningsOverview";
-import { OPERATIONS_OVERVIEW } from "../data/overviews/operationsOverview";
-import { GAPS_OVERVIEW } from "../data/overviews/gapsOverview";
-import { OPPORTUNITIES_OVERVIEW2 } from "../data/overviews/opportunitiesOverview2";
-import { LCA_OVERVIEW } from "../data/overviews/lcaOverview";
+// import { OPPORTUNITIES_OVERVIEW2 } from "../data/overviews/opportunitiesOverview2";
+import { OPPORTUNITIES_OVERVIEW } from "../data/opportunitiesOverview";
+import { OPERATIONS_OVERVIEW } from "../data/operationsOverview";
+import { LEARNING_OVERVIEW } from "../data/learningsOverview";
+import { GAPS_OVERVIEW } from "../data/gapsOverview";
+import { LCA_OVERVIEW } from "../data/lcaOverview";
 interface DataContextType {
   opportunityData: TopicComments[];
   operationData: TopicComments[];
@@ -14,7 +15,7 @@ interface DataContextType {
   lcaData: TopicComments[];
 }
 const defaultDataContextType: DataContextType = {
-  opportunityData: OPPORTUNITIES_OVERVIEW2,
+  opportunityData: OPPORTUNITIES_OVERVIEW,
   operationData: OPERATIONS_OVERVIEW,
   learningsData: LEARNING_OVERVIEW,
   gapsData: GAPS_OVERVIEW,

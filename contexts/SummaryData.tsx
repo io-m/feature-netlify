@@ -2,11 +2,11 @@
 
 import React, { ReactNode, createContext } from "react";
 import { Summary } from "../types/Summary";
-import { OPPORTUNITIES_SUMMARY } from "../data/summaries/opportunitiesSummary";
-import { OPERATIONS_SUMMARY } from "../data/summaries/operationsSummary";
-import { LEARNINGS_SUMMARY } from "../data/summaries/learningsSummary";
-import { GAPS_SUMMARY } from "../data/summaries/gapsSummary";
-import { LCA_SUMMARY } from "../data/summaries/lcaSummary";
+import { OPPORTUNITIES_SUMMARY } from "../data/opportunitiesSummary";
+import { OPERATIONS_SUMMARY } from "../data/operationsSummary";
+import { LEARNINGS_SUMMARY } from "../data2/summaries/learningsSummary";
+import { GAPS_SUMMARY } from "../data/gapsSummary";
+import { LCA_SUMMARY } from "../data/lcaSummary";
 
 interface SummaryContextType {
   opportunitySummary: Summary[];

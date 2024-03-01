@@ -22,8 +22,20 @@ export const countSubtopicOccurrences = (
   return result;
 };
 
+export const getTop5Subtopics = (
+  subtopics: {
+    value: number;
+    label: string;
+  }[]
+): {
+  value: number;
+  label: string;
+}[] => {
+  return subtopics.sort((a, b) => b.value - a.value).slice(0, 5);
+};
+
 const size = {
-  width: 1000,
+  width: 1200,
   height: 400,
 };
 
@@ -38,7 +50,9 @@ const CustomPieChart = ({ inputData, currentTopic }: Props) => {
   );
   const router = useRouter();
 
-  const subTopicOccurrencesData = countSubtopicOccurrences(inputData);
+  const subTopicOccurrencesData = getTop5Subtopics(
+    countSubtopicOccurrences(inputData)
+  );
 
   const handleClick = (event: any, data: any) => {
     const subTopicLabel = subTopicOccurrencesData[data.dataIndex].label;
@@ -53,7 +67,7 @@ const CustomPieChart = ({ inputData, currentTopic }: Props) => {
       series={[
         {
           arcLabel: (item) => `${item.value}`,
-          arcLabelMinAngle: 10,
+          arcLabelMinAngle: 5,
           data: subTopicOccurrencesData,
         },
       ]}
