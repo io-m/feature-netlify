@@ -20,6 +20,7 @@ import { DataContext } from "@/contexts/DataContext";
 import CustomPieChart from "@/components/Piechart";
 import ChatbotButton from "@/components/CustomButton";
 import { AvailableCountries } from "@/utilities/CustomAvailableCountries";
+import { SelectedSummaryTopicContext } from "../../contexts/SelectedSummaryJson";
 
 type Props = {
   topicDescription: string;
@@ -27,6 +28,7 @@ type Props = {
 };
 const TopicAnalyticContainer = ({ topicDescription, topic }: Props) => {
   const jsonData = useContext(DataContext);
+  const { setIsLCA, setDataSubTopic } = useContext(SelectedSummaryTopicContext);
   const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
   const [currentTopic, setCurrentTopic] = useState<Topic>(Topic.OPPORTUNITIES);
   const [data, setData] = useState<TopicComments[]>([]);
@@ -51,6 +53,9 @@ const TopicAnalyticContainer = ({ topicDescription, topic }: Props) => {
     const d = filterByChosenCountries();
     setFilteredByChosenCOuntries(d);
   }, [data, selectedKeys]);
+  useEffect(() => {
+    setIsLCA(false);
+  }, [setIsLCA]);
 
   useEffect(() => {
     const handleDataSet = () => {
